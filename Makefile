@@ -5,7 +5,7 @@ all: build copy
 
 
 build:
-	docker build --tag wheel:latest .
+	docker build --build-arg GithubAccessToken=${GithubAccessToken} --tag wheel:latest .
 
 copy:
 	docker run --name wheel -itd wheel:latest /bin/bash

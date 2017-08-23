@@ -159,7 +159,7 @@ RUN $PY36_BIN/pip install cython wheel numpy --no-binary numpy #numpy header are
 
 RUN $PY36_BIN/pip install boto3
 
-RUN git clone https://www.github.com/mapbox/rasterio
+RUN git clone https://$GithubAccessToken:x-oauth-basic@github.com/mapbox/rasterio
 ENV GDAL_VERSION 2.2.1
 ENV PACKAGE_DATA 1
 ENV PROJ_LIB $APP_DIR/local/share/proj
